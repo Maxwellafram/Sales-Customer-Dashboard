@@ -1,0 +1,747 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Order Information.xlsx
+Query=`Order 2017 &amp; 2018$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Order ID" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`" type="V_String" />
+            <Field name="Order Date" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`" type="V_String" />
+            <Field name="Ship Date" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`" type="V_String" />
+            <Field name="Ship Mode" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`" type="V_String" />
+            <Field name="Customer ID" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`" type="V_String" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`" type="V_String" />
+            <Field name="Segment" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2017 &amp; 2018$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Order Information.xlsx
+Query=`Order 2019 &amp; 2020$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Order ID" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`" type="V_String" />
+            <Field name="Order Date" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`" type="V_String" />
+            <Field name="Ship Date" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`" type="V_String" />
+            <Field name="Ship Mode" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`" type="V_String" />
+            <Field name="Customer ID" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`" type="V_String" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`" type="V_String" />
+            <Field name="Concate" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Order Information.xlsx|||`Order 2019 &amp; 2020$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="126" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Concate" selected="True" rename="Segment" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="246" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="126" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="8">C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <NoProgress>False</NoProgress>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Product Information.xls
+Query=`Product Information$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Order ID" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="V_WString" />
+            <Field name="Product ID" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="V_WString" />
+            <Field name="Category" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="V_WString" />
+            <Field name="Sub-Category" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="V_WString" />
+            <Field name="Product Name" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="V_WString" />
+            <Field name="Sales" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="Double" />
+            <Field name="Quantity" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="Double" />
+            <Field name="Discount" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="Double" />
+            <Field name="Base Price per Unit" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Product Information.xls|||`Product Information$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="342" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Order ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Order ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Order ID" selected="True" rename="Right_Order ID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="558" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\MAC\Desktop\Data Set\PBI Data\Customer Location Information.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Customer Location Information.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Region" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Customer Location Information.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Country/Region" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Customer Location Information.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Customer Location Information.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Customer Location Information.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Postal Code" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Customer Location Information.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="294" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\MAC\Desktop\Data Set\PBI Data\Return Infromation.xlsx|||`Returns$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Return Infromation.xlsx
+Query=`Returns$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Returned" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Return Infromation.xlsx|||`Returns$`" type="V_String" />
+            <Field name="Order ID" size="255" source="File: C:\Users\MAC\Desktop\Data Set\PBI Data\Return Infromation.xlsx|||`Returns$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="426" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Order ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Order ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_Order ID" selected="True" rename="Left_Right_Order ID" input="Left_" />
+                <SelectField field="Right_Order ID" selected="True" rename="Right_Order ID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="522" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Segment</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>Segment</RootName>
+          <Delimeters value="-" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="606" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Customer Name" selected="True" />
+            <SelectField field="Customer ID" selected="True" />
+            <SelectField field="Order ID" selected="True" />
+            <SelectField field="Order Date" selected="True" />
+            <SelectField field="Ship Date" selected="True" />
+            <SelectField field="Ship Mode" selected="True" />
+            <SelectField field="Product ID" selected="True" />
+            <SelectField field="Category" selected="True" />
+            <SelectField field="Sub-Category" selected="True" />
+            <SelectField field="Segment1" selected="True" rename="Segment" />
+            <SelectField field="Product Name" selected="True" />
+            <SelectField field="Sales" selected="True" />
+            <SelectField field="Quantity" selected="True" />
+            <SelectField field="Discount" selected="True" />
+            <SelectField field="Base Price per Unit" selected="True" />
+            <SelectField field="Returned" selected="True" />
+            <SelectField field="Segment2" selected="True" rename="Postal Code" type="Double" size="8" />
+            <SelectField field="Right_Order ID" selected="False" />
+            <SelectField field="Left_Right_Order ID" selected="False" />
+            <SelectField field="Segment" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="702" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Postal Code" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Postal Code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Postal Code" selected="True" rename="Right_Postal Code" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings>
+        <Position x="786" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Discount"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">False</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="882" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="([Base Price per Unit] * [Quantity])" field="Total Sales" size="8" type="Double" enabled="true" />
+            <FormulaField expression="IF [Discount] = 0 THEN [Total Sales]  ELSE [Total Sales] -([Total Sales] * [Discount]) ENDIF" field="Discounted Total Price" size="8" type="Double" enabled="true" />
+            <FormulaField expression="[Sales] - [Discounted Total Price]" field="Profit" size="4" type="Float" enabled="true" />
+            <FormulaField expression="DateTimeParse([Order Date],&quot;%b-%d-%Y&quot;)" field="Order Date" size="255" type="V_String" enabled="true" />
+            <FormulaField expression="DateTimeParse([Ship Date],&quot;%b-%d-%Y&quot;)" field="Ship Date" size="255" type="V_String" enabled="true" />
+            <FormulaField expression="([Profit] / [Sales]) * 100" field="Profit%" size="8" type="Double" enabled="true" />
+            <FormulaField expression="[Total Sales] * [Discount]" field="Discount Amount" size="4" type="Float" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Total Sales = ([Base Price per Unit] * [Quantity])
+Discounted Total Price = IF [...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="990" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Customer Name" selected="True" />
+            <SelectField field="Customer ID" selected="True" />
+            <SelectField field="Order ID" selected="True" />
+            <SelectField field="Order Date" selected="True" />
+            <SelectField field="Ship Date" selected="True" />
+            <SelectField field="Ship Mode" selected="True" />
+            <SelectField field="Product ID" selected="True" />
+            <SelectField field="Category" selected="True" />
+            <SelectField field="Sub-Category" selected="True" />
+            <SelectField field="Segment" selected="True" />
+            <SelectField field="Product Name" selected="True" />
+            <SelectField field="Quantity" selected="True" />
+            <SelectField field="Base Price per Unit" selected="True" />
+            <SelectField field="Returned" selected="True" />
+            <SelectField field="Total Sales" selected="True" rename="Total Price" />
+            <SelectField field="Discount" selected="True" />
+            <SelectField field="Discount Amount" selected="True" />
+            <SelectField field="Sales" selected="True" />
+            <SelectField field="Discounted Total Price" selected="True" />
+            <SelectField field="Profit" selected="True" />
+            <SelectField field="Profit%" selected="True" />
+            <SelectField field="Postal Code" selected="True" type="V_String" size="2147483647" />
+            <SelectField field="Region" selected="True" />
+            <SelectField field="Country/Region" selected="True" rename="Country" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="Right_Postal Code" selected="False" />
+            <SelectField field="Discounted Total Sales" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+            <SelectField field="Discounted Amount" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="1086" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Order Date</InputFieldName>
+          <Language>English</Language>
+          <Format>yyyy-MM-dd</Format>
+          <OutputFieldName>Converted Order Date</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Order Date From:
+yyyy-MM-dd</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="1194" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Ship Date</InputFieldName>
+          <Language>English</Language>
+          <Format>yyyy-MM-dd</Format>
+          <OutputFieldName>Converted Ship Date</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Ship Date From:
+yyyy-MM-dd</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1434" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Customer Name" selected="True" />
+            <SelectField field="Customer ID" selected="True" />
+            <SelectField field="Order ID" selected="True" />
+            <SelectField field="Converted Order Date" selected="True" rename="Order Date" />
+            <SelectField field="Converted Ship Date" selected="True" rename="Ship Date" />
+            <SelectField field="Ship Mode" selected="True" />
+            <SelectField field="Days_Taken_to_Ship" selected="True" />
+            <SelectField field="Product ID" selected="True" />
+            <SelectField field="Category" selected="True" />
+            <SelectField field="Sub-Category" selected="True" />
+            <SelectField field="Segment" selected="True" />
+            <SelectField field="Product Name" selected="True" />
+            <SelectField field="Quantity" selected="True" />
+            <SelectField field="Base Price per Unit" selected="True" />
+            <SelectField field="Returned" selected="True" />
+            <SelectField field="Total Price" selected="True" />
+            <SelectField field="Discount" selected="True" />
+            <SelectField field="Discount Amount" selected="True" />
+            <SelectField field="Sales" selected="True" />
+            <SelectField field="Discounted Total Price" selected="True" />
+            <SelectField field="Profit" selected="True" />
+            <SelectField field="Profit%" selected="True" type="Float" size="4" />
+            <SelectField field="Postal Code" selected="True" />
+            <SelectField field="Region" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="Day_Name" selected="True" />
+            <SelectField field="Order Date" selected="False" />
+            <SelectField field="Ship Date" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1338" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeDiff([Ship Date],[Order Date],'day')" field="Days_Taken_to_Ship" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="DateTimeFormat([Order Date],'%A')" field="Day_Name" size="2147483647" type="V_String" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Days_Taken_to_Ship = DateTimeDiff([Ship Date],[Order Date],'day')
+Day_Name = Dat...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1626" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="18">odb:Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Portfolio_Project;Data Source=KWAME\SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=KWAME;Use Encryption for Data=False;Tag with column collation when possible=False|||Sales_DataSet_Project</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <TransactionSize>0</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Source=KWAME\SQLEXPRESS
+Catalog=Portfolio_Project
+Query=Sales_DataSet_Project</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#2">
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="14" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="15" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="15" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="18" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Join" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Join" />
+      <Destination ToolID="19" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output26" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Salaes &amp; Customer DataCleaning</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="9ca13dbc-003e-4c14-b2f4-2f78ccbdeedb" />
+      <Telemetry>
+        <PreviousWorkflowId value="93bc0429-40d2-48cf-9eeb-794cbba28e50" />
+        <OriginWorkflowId value="93bc0429-40d2-48cf-9eeb-794cbba28e50" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
